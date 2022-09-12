@@ -21,7 +21,7 @@ import (
 	"cloud.google.com/go/logging"
 )
 
-func (a *App) Handler(w http.ResponseWriter, r *http.Request) {
+func (a *App) HelpHandler(w http.ResponseWriter, r *http.Request) {
 	a.log.Log(logging.Entry{
 		Severity: logging.Info,
 		HTTPRequest: &logging.HTTPRequest{

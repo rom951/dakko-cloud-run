@@ -24,7 +24,7 @@ import (
 	"time"
 
 	"cloud.google.com/go/logging"
-	"example.com/micro/metadata"
+	"dakko-cloud-run/metadata"
 	"github.com/gorilla/mux"
 	"google.golang.org/api/option"
 	"google.golang.org/grpc"
@@ -67,7 +67,7 @@ func main() {
 	// for more details.
 	ctx, cancel := context.WithTimeout(ctx, 10*time.Second)
 	defer cancel()
-	app.Shutdown(ctx)
+	_ = app.Shutdown(ctx)
 	log.Println("shutdown")
 }
 
@@ -104,8 +104,7 @@ func newApp(ctx context.Context, port, projectID string) (*App, error) {
 
 	// Setup request router.
 	r := mux.NewRouter()
-	r.HandleFunc("/", app.Handler).
-		Methods("GET")
+	r.HandleFunc("/", app.HelpHandler).Methods("GET")
 	app.Server.Handler = r
 
 	return app, nil

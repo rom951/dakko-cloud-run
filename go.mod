@@ -1,13 +1,13 @@
-module example.com/micro
+module dakko-cloud-run
 
-go 1.19
+go 1.18
 
 require (
 	cloud.google.com/go/compute v1.9.0
 	cloud.google.com/go/logging v1.5.0
 	github.com/gorilla/mux v1.8.0
-	golang.org/x/oauth2 v0.0.0-20220822191816-0ebed06d0094
-	google.golang.org/api v0.94.0
+	golang.org/x/oauth2 v0.0.0-20220909003341-f21342109be1
+	google.golang.org/api v0.95.0
 	google.golang.org/grpc v1.49.0
 )
 

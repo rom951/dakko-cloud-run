@@ -16,5 +16,14 @@
 .idea/
 .vscode/
 
+# Exclude Vendor folder
+vendor/
+
+# Old files
+*.old
+go.mod.*
+
 # Binary
 server
+
+Makefile
