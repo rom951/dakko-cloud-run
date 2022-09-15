@@ -28,7 +28,7 @@ func (a *App) HelpHandler(w http.ResponseWriter, r *http.Request) {
 			Request: r,
 		},
 		Labels:  map[string]string{"arbitraryField": "custom entry"},
-		Payload: "Structured logging example.",
+		Payload: "Structured logging cloud-run-firebase.",
 	})
 
 	startTime := time.Now()
