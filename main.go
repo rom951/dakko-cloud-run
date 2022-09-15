@@ -17,6 +17,9 @@ package main
 import (
 	"context"
 	"fmt"
+	"google.golang.org/api/option"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 	"log"
 	"net/http"
 	"os"
@@ -26,9 +29,6 @@ import (
 	"cloud.google.com/go/logging"
 	"dakko-cloud-run/metadata"
 	"github.com/gorilla/mux"
-	"google.golang.org/api/option"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
 )
 
 type App struct {

@@ -16,6 +16,9 @@
 .idea/
 .vscode/
 
+# Test direcloryes
+test/
+
 # Exclude Vendor folder
 vendor/
 
